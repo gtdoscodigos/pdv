@@ -20,8 +20,8 @@ public class lojacontroller {
 	@GetMapping({"/lojas"})//e o nome que eu  quiser colocar 
 	public String home(ModelMap  model){
 		
-		model.addAttribute("loja", lojaRepository.findAll());
+		model.addAttribute("lojas", lojaRepository.findAll());
 			
-		return "loja/loja";
+		return "lojas";
 	}
 }
