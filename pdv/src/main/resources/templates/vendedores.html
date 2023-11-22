@@ -2,21 +2,21 @@
 <html xmlns="https://www.w3.org/1999/xhtml"xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Tabela de Lojas</title>	
+<title>Tabela de Vendedores</title>	
 </head>	
 <body>
-	Tabela de Lojas
+	Tabela de Vendedores
 	<table class="table table-sm table-striped table-hover table-bordered">
 		<thead>
 			<tr>
-				<th>ID</th>
-				<th>primeiro nome</th>
+				<th>Id</th>
+				<th>Nome</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="loja : ${lojas}">
-				<td th:text="${loja.id}"></td>
-				<td th:text="${loja.nome}"></td>
+			<tr th:each="v: ${vendedores}">
+				<td th:text="${v.id}"></td>
+				<td th:text="${v.nome}"></td>
 			</tr>
 		</tbody>
 	</table> 

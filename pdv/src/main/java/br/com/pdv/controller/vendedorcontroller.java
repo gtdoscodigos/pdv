@@ -8,21 +8,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
-import br.com.pdv.repository.ProdutoRepository;
+import br.com.pdv.repository.VendedorRepository;
 
 	@Controller
 
-public class produtocontroller {
+public class vendedorcontroller {
 	
 	@Autowired
-	private ProdutoRepository produtoRepository;
+	private VendedorRepository vendedorRepository;
 	
-	@GetMapping({"/produtos"})
+	@GetMapping({"/vendedores"})
 	public String home(ModelMap  model){
 		
-		model.addAttribute("produtos", produtoRepository.findAll());
+		model.addAttribute("vendedores", vendedorRepository.findAll());
 			
-		return "produto";
+		return "vendedores";
 	}
 }
