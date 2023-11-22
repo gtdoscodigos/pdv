@@ -8,20 +8,22 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import br.com.pdv.repository.LojaRepository;
+import br.com.pdv.repository.ProdutoRepository;
 
 	@Controller
 
-public class lojacontroller {
-	
-	@Autowired
-	private LojaRepository lojaRepository;
-	
-	@GetMapping({"/lojas"})
-	public String home(ModelMap  model){
+
+public class produtocontroller {
+		@Autowired
+		private ProdutoRepository ProdutoRepository;
 		
-		model.addAttribute("lojas", lojaRepository.findAll());
+		@GetMapping({"/produto"})
+		public String home(ModelMap  model){
 			
-		return "lojas";
-	}
+			model.addAttribute("produto", ProdutoRepository.findAll());
+				
+			return "produto";
+		}
+
+
 }

@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 public class ProdutoEntidade implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
-	@Column(name = "id")
+	@Column(name = "idproduto")
 	private Long id;
 	public Long getId() {
 		return id;
@@ -24,16 +24,14 @@ public class ProdutoEntidade implements Serializable{
 		return nome;
 	}
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.nome= nome;
 	}
 	@Column (name = "quantidade")
 	private long quantidade;
 	public long getQuantidade() {
 		return quantidade;
 	}
-	public void setQuantidade(long quantidade) {
-		this.quantidade = quantidade;
-	}
+	
 	
 	
 }
