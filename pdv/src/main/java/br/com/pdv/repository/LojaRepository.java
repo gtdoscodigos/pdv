@@ -8,4 +8,5 @@ import br.com.pdv.entidade.LojaEntidade;
 @Repository
 public interface LojaRepository extends JpaRepository<LojaEntidade, Long>{
 
+	
 }

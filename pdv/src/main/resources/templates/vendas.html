@@ -2,26 +2,27 @@
 <html xmlns="https://www.w3.org/1999/xhtml"xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Table de Clientes</title>	
+<title>Tabela de Vendas</title>	
 </head>	
 <body>
-	Tabela de Clientes
+	Tabela de Vendas
 	<table class="table table-sm table-striped table-hover table-bordered">
 		<thead>
 			<tr>
 				<th>Id</th>
-				<th>Nome</th>
-				<th>Contato</th>
+				<th>Produto</th>
+				<th>Cliente</th>
+				<th>Vendedor</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="cliente : ${clientes}">
-				<td th:text="${cliente.id}"></td>
-				<td th:text="${cliente.nome}"></td>
-				<td th:text="${cliente.contato}"></td>
+			<tr th:each="vd : ${vendas}">
+				<td th:text="${vd.id}"></td>
+				<td th:text="${vd.id_produto}"></td>
+				<td th:text="${vd.id_cliente}"></td>
+				<td th:text="${vd.id_vendedor}"></td>
 			</tr>
 		</tbody>
 	</table> 
 </body>	
-
 </html>

@@ -8,4 +8,5 @@ import br.com.pdv.entidade.VendedorEntidade;
 @Repository
 public interface VendedorRepository extends JpaRepository<VendedorEntidade, Long>{
 
+	
 }

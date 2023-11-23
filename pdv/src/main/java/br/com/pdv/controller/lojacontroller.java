@@ -25,3 +25,5 @@ public class lojacontroller {
 		return "lojas";
 	}
 }
+
+	
